@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
 
@@ -27,7 +29,26 @@ func main() {
 	// fmt.Println(piscine.Atoi("++1234"))
 	// fmt.Println(piscine.Atoi("--1234"))
 
-	s := []int{5,4,3,2,1,0}
-	piscine.SortIntegerTable(s)
-	fmt.Println(s)
+	// s := []int{5,4,3,2,1,0}
+	// piscine.SortIntegerTable(s)
+	// fmt.Println(s)
+
+	// arg := 20
+	// fmt.Println(piscine.IterativeFactorial(arg))
+
+	// arg := 4
+	// fmt.Println(piscine.RecursiveFactorial(arg))
+
+	// fmt.Println(piscine.IterativePower(4, 3))
+
+	// fmt.Println(piscine.RecursivePower(10, 3))
+
+	// arg1 := 10
+	// fmt.Println(piscine.Fibonacci(arg1))
+
+	// fmt.Println(piscine.Sqrt(4))
+	// fmt.Println(piscine.Sqrt(3))
+
+	fmt.Println(piscine.IsPrime(5))
+	fmt.Println(piscine.IsPrime(4))
 }
