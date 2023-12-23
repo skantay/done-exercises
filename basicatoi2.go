@@ -1,17 +1,20 @@
 package piscine
 
-// Atoi function converts string to int
 func BasicAtoi2(s string) int {
-	numbers := []rune(s)
 	var result int
 
-	for i := 0; i < len(numbers); i++ {
-
-		if numbers[i] >= '0' && numbers[i] <= '9' {
-			result = (result * 10) + int(numbers[i] - '0')			
-			continue
+	for i, v := range s {
+		if v < '0' || v > '9' {
+			return 0
 		}
-		return 0
+		digit := int(v - '0')
+
+		result += digit
+
+		if i != len(s)-1 {
+			result = result * 10
+		}
 	}
+
 	return result
 }

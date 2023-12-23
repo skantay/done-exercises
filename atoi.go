@@ -1,26 +1,27 @@
 package piscine
 
-// Atoi function converts string to int
 func Atoi(s string) int {
-	numbers := []rune(s)
 	var result int
-	var isNegative bool
+	sign := 1
 
-	if numbers[0] == '-' {
-		numbers = numbers[1:]
-		isNegative = true
-	}
-
-	for i := 0; i < len(numbers); i++ {
-
-		if numbers[i] >= '0' && numbers[i] <= '9' {
-			result = (result * 10) + int(numbers[i] - '0')			
+	for i, v := range s {
+		if i == 0 && (v == '-' || v == '+') {
+			if v == '-' {
+				sign = -1
+			}
 			continue
 		}
-		return 0
+		if v < '0' || v > '9' {
+			return 0
+		}
+		digit := int(v - '0')
+
+		result += digit
+
+		if i != len(s)-1 {
+			result = result * 10
+		}
 	}
-	if isNegative {
-		result = -result
-	}
-	return result
+
+	return result * sign
 }

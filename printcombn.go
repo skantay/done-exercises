@@ -6,6 +6,7 @@ func PrintCombN(n int) {
 	if n == 1 {
 		for a := '0'; a <= '9'; a++ {
 			z01.PrintRune(a)
+
 			if a != '9' {
 				z01.PrintRune(',')
 				z01.PrintRune(' ')
@@ -16,6 +17,7 @@ func PrintCombN(n int) {
 			for b := a + 1; b <= '9'; b++ {
 				z01.PrintRune(a)
 				z01.PrintRune(b)
+
 				if b != '9' || a != '8' {
 					z01.PrintRune(',')
 					z01.PrintRune(' ')
@@ -29,6 +31,7 @@ func PrintCombN(n int) {
 					z01.PrintRune(a)
 					z01.PrintRune(b)
 					z01.PrintRune(c)
+
 					if c != '9' || b != '8' || a != '7' {
 						z01.PrintRune(',')
 						z01.PrintRune(' ')
@@ -45,6 +48,7 @@ func PrintCombN(n int) {
 						z01.PrintRune(b)
 						z01.PrintRune(c)
 						z01.PrintRune(d)
+
 						if a != '6' || b != '7' || c != '8' || d != '9' {
 							z01.PrintRune(',')
 							z01.PrintRune(' ')
@@ -64,6 +68,7 @@ func PrintCombN(n int) {
 							z01.PrintRune(c)
 							z01.PrintRune(d)
 							z01.PrintRune(e)
+
 							if a != '5' || b != '6' || c != '7' || d != '8' || e != '9' {
 								z01.PrintRune(',')
 								z01.PrintRune(' ')
@@ -86,6 +91,7 @@ func PrintCombN(n int) {
 								z01.PrintRune(d)
 								z01.PrintRune(e)
 								z01.PrintRune(f)
+
 								if a != '4' || b != '5' || c != '6' || d != '7' || e != '8' || f != '9' {
 									z01.PrintRune(',')
 									z01.PrintRune(' ')
@@ -111,6 +117,7 @@ func PrintCombN(n int) {
 									z01.PrintRune(e)
 									z01.PrintRune(f)
 									z01.PrintRune(j)
+
 									if a != '3' || b != '4' || c != '5' || d != '6' || e != '7' || f != '8' || j != '9' {
 										z01.PrintRune(',')
 										z01.PrintRune(' ')
@@ -139,6 +146,7 @@ func PrintCombN(n int) {
 										z01.PrintRune(f)
 										z01.PrintRune(j)
 										z01.PrintRune(g)
+
 										if a != '2' || b != '3' || c != '4' || d != '5' || e != '6' || f != '7' || j != '8' || g != '9' {
 											z01.PrintRune(',')
 											z01.PrintRune(' ')
@@ -170,6 +178,7 @@ func PrintCombN(n int) {
 											z01.PrintRune(j)
 											z01.PrintRune(g)
 											z01.PrintRune(h)
+
 											if a != '1' || b != '2' || c != '3' || d != '4' || e != '5' || f != '6' || j != '7' || g != '8' || h != '9' {
 												z01.PrintRune(',')
 												z01.PrintRune(' ')
@@ -184,5 +193,6 @@ func PrintCombN(n int) {
 			}
 		}
 	}
+
 	z01.PrintRune('\n')
 }
